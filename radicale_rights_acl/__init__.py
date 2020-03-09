@@ -31,10 +31,10 @@ class Rights(rights.BaseRights):
         collection = self.Collection(sane_path)
         acl_string = collection.get_meta("RADICALE:acl")
         if acl_string is not None:
-            acl_string.strip(",")
-            for acl in acl_string.split(","):
+            for acl in acl_string.strip(",").split(","):
                 acl.strip()
                 username, rw_string = acl.split(":")
+                username, rw_string = username.strip(), rw_string.strip()
                 if username == user and set(permissions).issubset(rw_string):
                     self.logger.debug(
                         "User's {} rights {} matches required rights {}. Access granted.".format(
