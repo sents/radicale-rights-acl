@@ -24,7 +24,7 @@ To use this you will need a radicale web plugin which can set the RDAICALE:acl p
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
-    license="GNU GPLv3",
+    license="GNU AGPLv3",
     install_requires=["radicale"],
     author="Finn Krein",
     author_email="finn@krein.moe",
